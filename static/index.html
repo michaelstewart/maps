@@ -27,7 +27,9 @@
   <script src="/js/bootstrap.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script src="app.js"></script>
+  <script src="/js/dropzone.js"></script>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/dropzone.css">
 </head>
 <body>
   <div class="navbar navbar-default">
@@ -49,7 +51,7 @@
             <li><a href="#">Another action</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#team-modal">Team</a></li>
           </ul>
         </li>
       </ul>
@@ -58,7 +60,7 @@
 
   <div id="map-canvas"></div>
 
-  <!-- Modal -->
+  <!-- Upload Modal -->
   <div class="modal fade" id="upload-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -67,11 +69,28 @@
           <h4 class="modal-title" id="myModalLabel">Upload Data</h4>
         </div>
         <div class="modal-body">
-          ...
+          <form action="/file-upload" class="dropzone" id="dropzone"></form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Team Modal -->
+  <div class="modal fade" id="team-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Team 19</h4>
+        </div>
+        <div class="modal-body">
+          Details about team 19.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
