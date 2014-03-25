@@ -40,6 +40,9 @@
       <ul class="nav navbar-nav">
         <li><a href="#" data-toggle="modal" data-target="#upload-modal">Upload Data</a></li>
       </ul>
+      <ul class="nav navbar-nav">
+        <li><a href="#" id="display">Display Data</a></li>
+      </ul>
       <form class="navbar-form navbar-left">
         <input type="text" class="form-control col-lg-8" placeholder="Search">
       </form>
@@ -69,7 +72,7 @@
           <h4 class="modal-title" id="myModalLabel">Upload Data</h4>
         </div>
         <div class="modal-body">
-          <form action="/file-upload" class="dropzone" id="dropzone"></form>
+          <form action="/upload" class="dropzone" id="dropzone"></form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
